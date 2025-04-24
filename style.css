@@ -3,12 +3,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 1200px;
+
+    max-width: 1100px;
     width: 95%;
+    position: relative;
 }
 
 .container .slide-container .images {
@@ -16,7 +18,7 @@ body {
     gap: 18px;
     overflow-x: auto;
     grid-template-columns: repeat(10, 1fr);
-    position: relative;
+ 
 }
 
 .container .buttons {
@@ -31,15 +33,18 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transform: translateY(-50%);
+    z-index: 10;
 }
 
-.container .buttons #prevbtn{
+.container  #prevbtn{
     left: -20px;
+    display: none;
 }
 
-.container .buttons #nextbtn{
-    right: 20px;
+.container #nextbtn{
+    right: -20px;
 }
+
 
 
 .container .slide-container .images .myImages {
@@ -49,3 +54,4 @@ body {
     object-fit: contain;
     background-color: #fff;
 }
+      
